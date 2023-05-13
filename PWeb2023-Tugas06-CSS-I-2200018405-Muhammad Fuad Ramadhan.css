@@ -1,0 +1,92 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+
+    header {
+      background-color: orange;
+      color: black;
+      width: 100%;
+      padding: 25px;  
+      position: relative;
+    }
+
+    header .logo {
+        float: left;
+        position: relative;
+    }
+
+    header .logo img {
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+
+    header .judul {
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+    
+    nav {
+        background-color: black;
+        width: 100%;
+        font-size: larger;
+        border: 2px black;
+        border-left: none;
+        border-right: none;
+    }
+
+    nav ul {
+        list-style-type: none;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    nav ul li a:hover {
+        color: white;
+    }
+
+    .konten {  
+      padding: 20px;
+      width: 100%;
+    }
+
+    .konten table {
+        width: 100%;
+    }
+
+    .konten table th {
+        padding: 10px;
+        color: white;
+        font-size: large;
+        background-color: darkblue;
+    }
+
+    .konten table td {
+        padding: 15px;
+        padding-left: 10%;
+    }
+
+    footer {
+      background-color: darkblue;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      clear: both;
+      width: 100%;
+      position: relative;
+    }
