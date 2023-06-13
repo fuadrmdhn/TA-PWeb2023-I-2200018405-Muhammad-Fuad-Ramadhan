@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biodata Mahasiswa</title>
+
+  <link rel="stylesheet" type="text/css" href="PWeb2023-Tugas-08-I-2200018405-Muhammad Fuad Ramadhan.css">
+  
+  <script type="text/javascript">
+    function submitBiodata() {
+      var nama = document.getElementById("nama").value;
+      var nim = document.getElementById("nim").value;
+      var prodi = document.getElementById("prodi").value;
+      var fakultas = document.getElementById("fakultas").value;
+      var alamat = document.getElementById("alamat").value;
+
+      // Validasi Nama (tidak boleh kosong)
+      if (nama === "") {
+        alert("Nama tidak boleh kosong");
+        return;
+      }
+
+      // Validasi NIM (harus angka dan tidak boleh kosong)
+      if (nim === "") {
+        alert("NIM tidak boleh kosong");
+        return;
+      }
+      if (isNaN(nim)) {
+        alert("NIM harus berupa angka");
+        return;
+      }
+
+      // Validasi Program Studi (tidak boleh kosong)
+      if (prodi === "") {
+        alert("Program Studi tidak boleh kosong");
+        return;
+      }
+
+      // Validasi Fakultas (tidak boleh kosong)
+      if (fakultas === "") {
+        alert("Fakultas tidak boleh kosong");
+        return;
+      }
+
+      // Validasi Alamat (tidak boleh kosong)
+      if (alamat === "") {
+        alert("Alamat tidak boleh kosong");
+        return;
+      }
+
+      var hasil = "Nama : " + nama + "<br>" +
+                  "NIM : " + nim + "<br>" +
+                  "Program Studi : " + prodi + "<br>" +
+                  "Fakultas : " + fakultas + "<br>" +
+                  "Alamat : " + alamat;
+
+      document.getElementById("hasil").innerHTML = hasil;
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+    <h1>Biodata Mahasiswa</h1>
+  </center>
+
+  <div class="container">
+    <form>
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" name="nama"><br>
+
+      <label for="nim">NIM</label>
+      <input type="text" id="nim" name="nim"><br>
+
+      <label for="prodi">Program Studi</label>
+      <input type="text" id="prodi" name="prodi"><br>
+
+      <label for="fakultas">Fakultas</label>
+      <input type="text" id="fakultas" name="fakultas"><br>
+
+      <label for="alamat">Alamat</label>
+      <textarea id="alamat" name="alamat"></textarea><br>
+
+      <button type="button" onclick="submitBiodata()">Submit</button>
+    </form>
+
+    <hr>
+
+    <div id="hasil"></div>
+  </div>
+</body>
+</html>
